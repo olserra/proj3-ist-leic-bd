@@ -1,0 +1,26 @@
+html=f'''
+<!DOCTYPE html>
+<title>List accounts - Python</title>
+<body style="padding: 20px">
+  <table border="3">
+    <thead>
+      <tr>
+        <th>account_number</th>
+        <th>branch_name</th>
+        <th>balance</th>
+      </tr>
+    </thead>
+    <tbody>
+      ''' for record in cursor: html+=f ’’’
+      <tr>
+        <td>{record[0]}</td>
+        <td>{record[1]}</td>
+        <td>{record[2]}</td>
+      </tr>
+      ''' html+='''
+    </tbody>
+
+    <tbody></tbody>
+  </table>
+</body>
+'’’
